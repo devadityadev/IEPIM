@@ -1,31 +1,30 @@
-// Form Validation and Submission
+// Contact Form Validation
 document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();  // Prevent form submission to handle it via JS
+    e.preventDefault();  // Prevent default form submission
 
-    // Get form values
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let message = document.getElementById("message").value;
+    // Retrieve input values
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
-    // Check if all fields are filled
+    // Validate the fields
     if (name && email && message) {
-        // If valid, display success message
         alert("Thank you for your message! We will get back to you soon.");
         
-        // Optionally, reset form after submission
+        // Optionally reset the form
         document.getElementById("contactForm").reset();
     } else {
-        // If any field is empty, show an error message
-        alert("Please fill out all fields.");
+        alert("Please fill in all fields before submitting.");
     }
 });
 
-// Smooth Scroll for anchor links
+// Smooth Scroll for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+            behavior: 'smooth',
+            block: 'start'
         });
     });
 });
