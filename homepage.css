@@ -1,4 +1,4 @@
-
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +6,9 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
 /* Header Styling */
@@ -26,6 +27,7 @@ nav .logo a {
     color: #fff;
     font-size: 24px;
     text-decoration: none;
+    font-weight: 600;
 }
 
 nav .nav-links {
@@ -41,40 +43,46 @@ nav .nav-links a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 nav .nav-links a:hover {
-    text-decoration: underline;
+    color: #3498db;
 }
 
 /* Main Banner Section */
 .main-banner {
-    background: #3498db;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
     color: #fff;
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
+    border-bottom: 5px solid #fff;
 }
 
 .main-banner h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    margin-bottom: 15px;
 }
 
 .main-banner p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-top: 10px;
 }
 
 .cta-buttons {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .cta-button {
     background-color: #e74c3c;
-    padding: 10px 20px;
+    padding: 12px 25px;
     color: #fff;
     text-decoration: none;
     margin: 10px;
     border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
@@ -83,39 +91,96 @@ nav .nav-links a:hover {
 
 /* Sections */
 section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
 section h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #333;
 }
 
 section p {
     font-size: 1.1rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    color: #666;
 }
 
-ul {
+/* Features Section */
+#features ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
     list-style: none;
+    margin: 0;
 }
 
-ul li {
-    font-size: 1.1rem;
-    margin: 10px 0;
+#features li {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+#features li:hover {
+    transform: translateY(-10px);
+}
+
+#features li h3 {
+    font-size: 1.6rem;
+    color: #3498db;
+}
+
+#features li p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Testimonials Section */
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
 .testimonials p {
     font-size: 1.2rem;
-    margin: 10px 0;
+    color: #333;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Call-to-Action Section */
+#cta {
+    background-color: #3498db;
+    color: #fff;
+    padding: 50px 20px;
+    margin-top: 40px;
+}
+
+#cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#cta .cta-button {
+    background-color: #e74c3c;
+    font-size: 1.2rem;
+    padding: 15px 40px;
+    text-transform: uppercase;
 }
 
 /* Footer Styling */
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
 }
 
@@ -123,10 +188,12 @@ footer a {
     color: #fff;
     margin: 10px;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #3498db;
 }
 
 footer .social-media-links a {
