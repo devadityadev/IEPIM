@@ -3,113 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>IEPIM - Interactive Educational Portal</title>
-    
-    <!-- Link to external CSS -->
+    <title>IEPIM - Homepage</title>
     <link rel="stylesheet" href="homepage.css">
-
-    <!-- AOS Animations (for smooth scroll effects) -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-    <script>
-        AOS.init();  // Initialize AOS for scroll animations
-    </script>
+    <script src="homepage.js" defer></script>
 </head>
 <body>
 
-<!-- Header Section -->
-<header>
-    <nav>
+    <!-- Header Section -->
+    <header>
         <div class="logo">
-            <a href="#">IEPIM</a>
+            <h1>IEPIM</h1>
         </div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#cta">Contact</a></li>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#institutions">Institutions</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Banner Section -->
+    <section class="main-banner">
+        <h2>Welcome to IEPIM</h2>
+        <p>Your gateway to seamless educational management for students, parents, and institutions.</p>
+        <button class="get-started" onclick="window.location.href='/signup'">Get Started</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h3>About IEPIM</h3>
+        <p>IEPIM is an interactive portal designed to manage education processes effectively for students, parents, and institutions.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <h3>Key Features of IEPIM</h3>
+        <ul>
+            <li>Institution Management Tools</li>
+            <li>Student Dashboard</li>
+            <li>Parent Portal</li>
+            <li>Real-Time Communication</li>
         </ul>
-    </nav>
-</header>
+    </section>
 
-<!-- Main Banner Section -->
-<section class="main-banner">
-    <h1>Welcome to IEPIM</h1>
-    <p>Your gateway to seamless educational management</p>
-    <div class="cta-buttons">
-        <a href="#login" class="cta-button">Login</a>
-        <a href="#register" class="cta-button">Register</a>
-    </div>
-</section>
+    <!-- Testimonials/Statistics Section -->
+    <section id="why-choose">
+        <h3>Why Choose IEPIM?</h3>
+        <p>Trusted by 100+ institutions, 10,000+ users worldwide.</p>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"IEPIM has revolutionized our institution's operations. The interface is intuitive, and the tools are powerful!"</p>
+                <p>- John Doe, Institution Admin</p>
+            </div>
+            <div class="testimonial">
+                <p>"As a parent, I love how easy it is to track my child's progress through the portal."</p>
+                <p>- Jane Smith, Parent</p>
+            </div>
+        </div>
+    </section>
 
-<!-- Login Section -->
-<section id="login">
-    <h2>Login</h2>
-    <div class="user-options">
-        <a href="login-student.html" class="cta-button">Student Login</a>
-        <a href="login-parent.html" class="cta-button">Parent Login</a>
-        <a href="login-institution.html" class="cta-button">Institution Management Login</a>
-    </div>
-</section>
+    <!-- Institutions Section -->
+    <section id="institutions">
+        <h3>For Institutions</h3>
+        <p>Manage student data, communicate with parents, and streamline your institutional processes effortlessly.</p>
+        <button class="register-institution" onclick="window.location.href='/signup'">Register Your Institution</button>
+    </section>
 
-<!-- Registration Section -->
-<section id="register">
-    <h2>Register</h2>
-    <div class="user-options">
-        <a href="register-student.html" class="cta-button">Student Registration</a>
-        <a href="register-parent.html" class="cta-button">Parent Registration</a>
-        <a href="register-institution.html" class="cta-button">Institution Registration</a>
-    </div>
-</section>
+    <!-- Call to Action Section -->
+    <section id="cta">
+        <h3>Get in Touch</h3>
+        <p>If you have any questions or need more information, feel free to contact us!</p>
+        <button onclick="window.location.href='#contact'">Contact Us</button>
+    </section>
 
-<!-- About Section -->
-<section id="about">
-    <h2>About IEPIM</h2>
-    <p>IEPIM is an interactive platform designed for students, parents, and educational institutions to collaborate and manage academic activities in real-time.</p>
-</section>
+    <!-- Contact Form Section -->
+    <section id="contact">
+        <h3>Contact Us</h3>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 
-<!-- Features Section -->
-<section id="features">
-    <h2>Key Features of IEPIM</h2>
-    <ul>
-        <li data-aos="fade-up"><i class="fas fa-cogs"></i> Institution Management Tools</li>
-        <li data-aos="fade-up" data-aos-delay="200"><i class="fas fa-graduation-cap"></i> Student Dashboard</li>
-        <li data-aos="fade-up" data-aos-delay="400"><i class="fas fa-user-graduate"></i> Parent Portal</li>
-        <li data-aos="fade-up" data-aos-delay="600"><i class="fas fa-comments"></i> Real-Time Communication</li>
-    </ul>
-</section>
-
-<!-- Call to Action Section -->
-<section id="cta">
-    <h2>Get in Touch</h2>
-    <p>Contact us today to learn more about how IEPIM can transform your educational management.</p>
-    <a href="#contact-form" class="cta-button">Contact Us</a>
-</section>
-
-<!-- Contact Form Section -->
-<section id="contact-form">
-    <h2>Contact Us</h2>
-    <form action="#" method="post" id="contactForm">
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-        <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit" class="cta-button">Submit</button>
-    </form>
-</section>
-
-<!-- Footer Section -->
-<footer>
-    <p>© 2024 IEPIM | All Rights Reserved</p>
-    <div class="social-media-links">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-    </div>
-</footer>
-
-<!-- Link to external JavaScript -->
-<script src="homepage.js"></script>
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 IEPIM | All Rights Reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
 
 </body>
 </html>
