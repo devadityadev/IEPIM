@@ -1,4 +1,4 @@
-/* General Styles (unchanged) */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,6 +13,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 header .logo h1 {
@@ -40,127 +41,23 @@ nav ul li a:hover {
     color: #f39c12;
 }
 
-/* Main Banner */
-.main-banner {
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.main-banner h2 {
-    font-size: 3rem;
-}
-
-.main-banner p {
-    font-size: 1.2rem;
-}
-
-.get-started {
-    background-color: #f39c12;
-    border: none;
-    padding: 15px 30px;
-    color: white;
-    font-size: 1rem;
+/* Hamburger Menu (Mobile) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
     cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
     border-radius: 5px;
 }
 
-.get-started:hover {
-    background-color: #e67e22;
-}
-
-/* Section Styles */
-section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-section h3 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-/* Testimonials Section */
-.testimonials {
+#nav-links {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.testimonial {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 40%;
-}
-
-.testimonial p {
-    font-size: 1rem;
-}
-
-/* Contact Form */
-form {
-    display: grid;
-    gap: 20px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-form label {
-    font-size: 1.1rem;
-}
-
-form input, form textarea {
-    padding: 10px;
-    font-size: 1rem;
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-form button {
-    background-color: #2d3e50;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-form button:hover {
-    background-color: #f39c12;
-}
-
-/* Footer */
-footer {
-    background-color: #2d3e50;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-footer .social-media a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer .social-media a:hover {
-    color: #f39c12;
 }
 
 /* Mobile Adjustments */
@@ -171,12 +68,37 @@ footer .social-media a:hover {
     }
 
     nav ul {
+        display: none;
         flex-direction: column;
-        margin-top: 10px;
+        width: 100%;
+        padding: 0;
     }
 
     nav ul li {
         margin: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+        padding: 10px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a:hover {
+        background-color: #f39c12;
+        color: white;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    #nav-links.active {
+        display: flex;
     }
 
     .main-banner h2 {
@@ -213,29 +135,5 @@ footer .social-media a:hover {
 
     footer .social-media a {
         margin: 10px;
-    }
-}
-
-/* Very Small Screens (e.g., Phones in Portrait Mode) */
-@media screen and (max-width: 480px) {
-    .main-banner h2 {
-        font-size: 2rem;
-    }
-
-    .main-banner p {
-        font-size: 0.9rem;
-    }
-
-    .get-started {
-        padding: 10px 20px;
-        font-size: 0.8rem;
-    }
-
-    .testimonial {
-        width: 90%;
-    }
-
-    .social-media a {
-        font-size: 0.9rem;
     }
 }
